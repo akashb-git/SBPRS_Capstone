@@ -12,7 +12,7 @@ class Recommendation:
     def __init__(self):
         self.data = pickle.load(open('data.pkl','rb'))
         self.user_final_rating = pickle.load(open('user_final_rating.pkl','rb'))
-        self.model = pickle.load(open('xgboost_model.pkl','rb'))
+        self.model = pickle.load(open('random_forest_tuned_model.pkl','rb'))
         self.raw_data = pd.read_csv("sample30.csv")
         self.data = pd.concat([self.raw_data[['id','name','brand','categories','manufacturer']],self.data], axis=1)
  
